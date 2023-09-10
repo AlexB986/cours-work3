@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: dev
+      changes:
+        - createTable:
+            tableName: bid
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: bigger_name
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: local_date_time
+                  type: timestamp
+                  constraints:
+                    nullable: false
+#              - column:
+#                  name: lot_id
+#                  type: int
+#                  constraints:
+#                    foreignKeyName: fk_lot_bid
+#                    references: lot(id)
+#                    nullable: false

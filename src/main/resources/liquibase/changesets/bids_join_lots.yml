@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: dev
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: id
+            baseTableName: bid
+            constraintName: fk_lot_bid
+            referencedColumnNames: id
+            referencedTableName: lot
+
+
