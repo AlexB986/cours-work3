@@ -5,6 +5,6 @@ databaseChangeLog:
   - include:
       file:
         liquibase/changesets/create_bid.yml
-  - include:
-      file:
-        liquibase/changesets/bids_join_lots.yml
+#  - include:
+#      file:
+#        liquibase/changesets/bids_join_lots.yml

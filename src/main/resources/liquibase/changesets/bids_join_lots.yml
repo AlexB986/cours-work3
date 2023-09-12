@@ -1,13 +1,28 @@
-databaseChangeLog:
-  - changeSet:
-      id: 3
-      author: dev
-      changes:
-        - addForeignKeyConstraint:
-            baseColumnNames: id
-            baseTableName: bid
-            constraintName: fk_lot_bid
-            referencedColumnNames: id
-            referencedTableName: lot
+#databaseChangeLog:
+#  - changeSet:
+#      id: 3
+#      author: dev
+#      changes:
+#        - addForeignKeyConstraint:
+#            baseColumnNames: id
+#            baseTableName: lot
+#            constraintName: lot_id_bid_id
+#            referencedColumnNames: id
+#            referencedTableName: bid
 
-
+#
+#  changeSet:
+#    id:  addPrimaryKey-example
+#    author:  liquibase-docs
+#    changes:
+#      -  addPrimaryKey:
+#           catalogName:  cat
+#           clustered:  true
+#           columnNames:  id
+#           constraintName:  pk_person
+#           forIndexName:  A String
+#           schemaName:  public
+#           tableName:  person
+#           tablespace:  A String
+#           validate:  true
+#...

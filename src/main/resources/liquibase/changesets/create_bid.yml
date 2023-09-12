@@ -23,10 +23,10 @@ databaseChangeLog:
                   type: timestamp
                   constraints:
                     nullable: false
-#              - column:
-#                  name: lot_id
-#                  type: int
-#                  constraints:
-#                    foreignKeyName: fk_lot_bid
-#                    references: lot(id)
-#                    nullable: false
+              - column:
+                  name: lot_id
+                  type: int
+                  constraints:
+                    foreignKeyName: id
+                    references: lot (id)
+                    nullable: false

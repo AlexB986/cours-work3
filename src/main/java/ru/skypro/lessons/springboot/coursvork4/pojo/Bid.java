@@ -24,7 +24,7 @@ public class Bid {
     @CreationTimestamp
     private LocalDateTime localDateTime;
     @ManyToOne
-    @JoinColumn(name = "fk_lot_bid",insertable = false,updatable = false)
+    @JoinColumn(name = "lot_id",insertable = false,updatable = false)
     private Lot lot;
 
     @Override
