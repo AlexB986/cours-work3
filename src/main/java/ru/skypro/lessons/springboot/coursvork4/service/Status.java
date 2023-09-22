@@ -2,7 +2,7 @@ package ru.skypro.lessons.springboot.coursvork4.service;
 
 import lombok.Getter;
 
-@Getter
+
 public enum Status {
 
     STARTED("STARTED"),
@@ -13,6 +13,10 @@ public enum Status {
 
     Status(String status) {
         this.typeStatus = status;
+    }
+
+    public String getTypeStatus() {
+        return typeStatus;
     }
 
     @Override

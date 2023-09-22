@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.SourceType;
+
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
@@ -21,8 +24,8 @@ public class Bid {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String biggerName;
-    @CreationTimestamp
-    private LocalDateTime localDateTime;
+    @CreationTimestamp(source = SourceType.DB)
+    private Timestamp timestamp;
     @ManyToOne
     @JoinColumn(name = "lot_id",insertable = false,updatable = false)
     private Lot lot;
@@ -32,11 +35,11 @@ public class Bid {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bid bid = (Bid) o;
-        return Objects.equals(id, bid.id) && Objects.equals(biggerName, bid.biggerName) && Objects.equals(localDateTime, bid.localDateTime) && Objects.equals(lot, bid.lot);
+        return Objects.equals(id, bid.id) && Objects.equals(biggerName, bid.biggerName) && Objects.equals(timestamp, bid.timestamp) && Objects.equals(lot, bid.lot);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, biggerName, localDateTime, lot);
+        return Objects.hash(id, biggerName, timestamp, lot);
     }
 }

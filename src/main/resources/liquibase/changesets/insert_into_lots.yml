@@ -1,0 +1,89 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: dev
+      changes:
+        - insert:
+            tableName: lot
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: status
+                  value: STOPPED
+              - column:
+                  name: title
+                  value: кольцо
+              - column:
+                  name: description
+                  value: золото, брилиант.
+              - column:
+                  name: start_price
+                  value: 100
+              - column:
+                  name: big_price
+                  value: 3
+        - insert:
+            tableName: lot
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: status
+                  value: STOPPED
+              - column:
+                  name: title
+                  value: книга
+              - column:
+                  name: description
+                  value: единственный экземпляр
+              - column:
+                  name: start_price
+                  value: 100
+              - column:
+                  name: big_price
+                  value: 4
+        - insert:
+            tableName: lot
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: status
+                  value: STARTED
+              - column:
+                  name: title
+                  value: картина
+              - column:
+                  name: description
+                  value: черный треугольник
+              - column:
+                  name: start_price
+                  value: 100
+              - column:
+                  name: big_price
+                  value: 0
+        - insert:
+            tableName: lot
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: status
+                  value: CREATED
+              - column:
+                  name: title
+                  value: машина
+              - column:
+                  name: description
+                  value: форд Т-1
+              - column:
+                  name: start_price
+                  value: 100
+              - column:
+                  name: big_price
+                  value: 10

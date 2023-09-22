@@ -16,16 +16,16 @@ import java.util.List;
 @Getter
 @Setter
 public class Lot {
-    private Status typeStatus;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String status =String.valueOf( Status.CREATED);
+    @Enumerated(EnumType.STRING)
+    private Status status;
     private String title;
     private String description;
     private Integer startPrice;
     private Integer bigPrice;
-    @OneToMany(mappedBy ="lot")
-    private List <Bid> bidList;
+    @OneToMany(mappedBy = "lot")
+    private List<Bid> bidList;
 
 }
