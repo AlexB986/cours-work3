@@ -1,22 +1,15 @@
 package ru.skypro.lessons.springboot.coursvork4.service;
 
-import ru.skypro.lessons.springboot.coursvork4.dto.FullLot;
-import ru.skypro.lessons.springboot.coursvork4.pojo.Bid;
+import ru.skypro.lessons.springboot.coursvork4.dto.FullLotDTO;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BidService {
-    /**
-     *  Get Получить информацию о первом ставившем на лот
-     * Имя первого ставившего и дата первой ставки
-     */
-    List<FullLot> getFirstBid(int id);
 
     /**
-     *  Get  Возвращает имя ставившего на данный лот наибольшее количество раз
-     * Имя первого ставившего и дата его последней ставки
+     * Get  Получить полную информацию о лоте
+     * Возвращает полную информацию о лоте с последним ставившим и текущей ценой
      */
-    List<FullLot> getFrequentBid(int id);
-
-
+    Optional<FullLotDTO> findLotById(Integer id);
 }

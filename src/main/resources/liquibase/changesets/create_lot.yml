@@ -34,7 +34,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: big_price
+                  name: bid_price
                   type: int
                   constraints:
                     nullable: false

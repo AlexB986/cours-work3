@@ -1,27 +1,35 @@
 package ru.skypro.lessons.springboot.coursvork4.dto;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
-import ru.skypro.lessons.springboot.coursvork4.pojo.Bid;
+import org.springframework.stereotype.Component;
+import ru.skypro.lessons.springboot.coursvork4.model.Bid;
+import ru.skypro.lessons.springboot.coursvork4.model.Lot;
 import ru.skypro.lessons.springboot.coursvork4.service.Status;
-
-public class FullLot {
+@Component
+public class FullLotDTO {
     private Integer id;
-    private String status;
-    private String descriptor;
+    private Status status;
+    private String title;
+    private String description;
     private Integer startPrice;
     private Integer bidPrice;
     private Integer currentPrice;
     private Bid lastBid;
 
-    public FullLot(Integer id, String status, String descriptor, Integer startPrice, Integer bidPrice, Integer currentPrice, Bid lastBid) {
+
+    public FullLotDTO(Integer id, Status status, String title, String description, Integer startPrice, Integer bidPrice, Integer currentPrice, Bid lastBid) {
         this.id = id;
         this.status = status;
-        this.descriptor = descriptor;
+        this.title = title;
+        this.description = description;
         this.startPrice = startPrice;
         this.bidPrice = bidPrice;
         this.currentPrice = currentPrice;
         this.lastBid = lastBid;
     }
+
+    public FullLotDTO() {
+    }
+
 
     public Integer getId() {
         return id;
@@ -31,20 +39,28 @@ public class FullLot {
         this.id = id;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
-    public String getDescriptor() {
-        return descriptor;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDescriptor(String descriptor) {
-        this.descriptor = descriptor;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getStartPrice() {
@@ -68,27 +84,19 @@ public class FullLot {
     }
 
     public void setCurrentPrice(Integer currentPrice) {
+
         this.currentPrice = currentPrice;
     }
 
-    public Bid getlastBid() {
+    public Bid getLastBid() {
         return lastBid;
     }
 
-    public void setlastBid(Bid bid) {
+    public void setLastBid(Bid lastBid) {
         this.lastBid = lastBid;
     }
 
-    @Override
-    public String toString() {
-        return "FullLot{" +
-                "id=" + id +
-                ", status='" + status + '\'' +
-                ", descriptor='" + descriptor + '\'' +
-                ", startPrice=" + startPrice +
-                ", bidPrice=" + bidPrice +
-                ", currentPrice=" + currentPrice +
-                ", lastBid=" + lastBid +
-                '}';
     }
-}
+
+
+

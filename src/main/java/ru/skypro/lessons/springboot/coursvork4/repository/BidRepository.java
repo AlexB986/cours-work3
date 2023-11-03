@@ -4,12 +4,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import ru.skypro.lessons.springboot.coursvork4.dto.FullLotDTO;
-import ru.skypro.lessons.springboot.coursvork4.model.Lot;
+import ru.skypro.lessons.springboot.coursvork4.model.Bid;
 
-import java.util.List;
 import java.util.Optional;
 
-public interface LotRepository extends JpaRepository<Lot, Integer> {
-
-
+public interface BidRepository extends JpaRepository <Bid, Integer>{
+    @Query(value = "SELECT * FROM bid WHERE id= :id ORDER BY timestamp LIMIT 1",nativeQuery = true)
+    Optional<FullLotDTO> fullLotFromLot(@Param("id") Integer id);
 }

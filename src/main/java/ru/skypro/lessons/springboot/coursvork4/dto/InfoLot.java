@@ -1,15 +1,13 @@
 package ru.skypro.lessons.springboot.coursvork4.dto;
 
 public class InfoLot {
-    private Integer id;
     private String status;
     private String titel;
     private String description;
     private Integer startPrice;
     private Integer bidPrice;
 
-    public InfoLot(Integer id, String status, String titel, String description, Integer startPrice, Integer bidPrice) {
-        this.id = id;
+    public InfoLot(String status, String titel, String description, Integer startPrice, Integer bidPrice) {
         this.status = status;
         this.titel = titel;
         this.description = description;
@@ -17,13 +15,6 @@ public class InfoLot {
         this.bidPrice = bidPrice;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getStatus() {
         return status;
@@ -65,15 +56,14 @@ public class InfoLot {
         this.bidPrice = bidPrice;
     }
 
-    @Override
-    public String toString() {
-        return "InfoLot{" +
-                "id=" + id +
-                ", status='" + status + '\'' +
-                ", titel='" + titel + '\'' +
-                ", description='" + description + '\'' +
-                ", startPrice=" + startPrice +
-                ", bidPrice=" + bidPrice +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "InfoLot{
+//                ", status='" + status + '\'' +
+//                ", titel='" + titel + '\'' +
+//                ", description='" + description + '\'' +
+//                ", startPrice=" + startPrice +
+//                ", bidPrice=" + bidPrice +
+//                '}';
+//    }
 }

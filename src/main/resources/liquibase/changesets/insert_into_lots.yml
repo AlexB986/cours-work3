@@ -22,7 +22,7 @@ databaseChangeLog:
                   name: start_price
                   value: 100
               - column:
-                  name: big_price
+                  name: bid_price
                   value: 3
         - insert:
             tableName: lot
@@ -43,7 +43,7 @@ databaseChangeLog:
                   name: start_price
                   value: 100
               - column:
-                  name: big_price
+                  name: bid_price
                   value: 4
         - insert:
             tableName: lot
@@ -64,7 +64,7 @@ databaseChangeLog:
                   name: start_price
                   value: 100
               - column:
-                  name: big_price
+                  name: bid_price
                   value: 0
         - insert:
             tableName: lot
@@ -85,5 +85,5 @@ databaseChangeLog:
                   name: start_price
                   value: 100
               - column:
-                  name: big_price
+                  name: bid_price
                   value: 10

@@ -4,12 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
-public class InfoPersonData {
+public class BiderInfo {
 
     private String bidderName;
-    private Timestamp bidDate;
+    private LocalDateTime bidDate;
 
     public String getBidderName() {
         return bidderName;
@@ -19,17 +21,17 @@ public class InfoPersonData {
         this.bidderName = bidderName;
     }
 
-    public Timestamp getBidDate() {
+    public LocalDateTime getBidDate() {
         return bidDate;
     }
 
-    public void setBidDate(Timestamp bidDate) {
+    public void setBidDate(LocalDateTime bidDate) {
         this.bidDate = bidDate;
     }
 
     @Override
     public String toString() {
-        return "infoPersonData{" +
+        return "BiderInfo{" +
                 "bidderName='" + bidderName + '\'' +
                 ", bidDate=" + bidDate +
                 '}';
