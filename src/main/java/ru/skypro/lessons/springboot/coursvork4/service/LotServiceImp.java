@@ -20,15 +20,5 @@ public class LotServiceImp implements LotService {
 
 
 
-//    @Override раскоментировать
-//    public List<FullLotDTO> getFullLot(int id) {
-//    public Optional<FullLotDTO> findLotById(Integer id) {
-//        FullLotDTO fullLotDTO1 = new FullLotDTO();
-//        Optional<FullLotDTO> fullLotDTOOptional = lotRepository.fullLotFromLot(id);
-//        Integer current = fullLotDTOOptional.get().getStartPrice() * fullLotDTOOptional.get().getBidPrice() + fullLotDTOOptional.get().getStartPrice();
-//        fullLotDTO1.setCurrentPrice(current);
-//        System.out.println("current");
-//        return Optional.of(fullLotDTO1);
-//            return bidRepository.fullLotFromLot(id);
 
 }
