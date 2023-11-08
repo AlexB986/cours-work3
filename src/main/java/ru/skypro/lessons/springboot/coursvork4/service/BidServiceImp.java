@@ -11,15 +11,26 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 
 public class BidServiceImp implements BidService {
 
     @Autowired
-    private final BidRepository bidRepository;
-    @Autowired
-    private final FullLotDTO fullLotDTO;
+    private  BidRepository bidRepository;
+//    @Autowired
+//    private  FullLotDTO fullLotDTO;
 
+    public BidServiceImp(BidRepository bidRepository) {
+        this.bidRepository = bidRepository;
+    }
+
+    public BidServiceImp() {
+    }
+
+//    public BidServiceImp(BidRepository bidRepository, FullLotDTO fullLotDTO) {
+//        this.bidRepository = bidRepository;
+//        this.fullLotDTO = fullLotDTO;
+//    }
 
     /**
      * Get  Получить полную информацию о лоте

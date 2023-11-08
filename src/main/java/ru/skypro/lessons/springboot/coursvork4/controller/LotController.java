@@ -16,13 +16,16 @@ import java.util.Optional;
 @RequestMapping("lot")
 public class LotController {
 
-    private  LotService lotService;
-    private  BidService bidService;
+    private LotService lotService;
+    private BidService bidService;
 
 
     public LotController(LotService lotService, BidService bidService) {
         this.lotService = lotService;
         this.bidService = bidService;
+    }
+
+    public LotController() {
     }
 
     /**
