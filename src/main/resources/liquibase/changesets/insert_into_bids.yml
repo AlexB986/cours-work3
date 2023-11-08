@@ -1,0 +1,80 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: dev
+      changes:
+        - insert:
+            tableName: bid
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: bidder_name
+                  value: Коля
+              - column:
+                  name: timestamp
+                  value: now()
+              - column:
+                  name: lot_id
+                  value: 1
+        - insert:
+            tableName: bid
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: bidder_name
+                  value: Валя
+              - column:
+                  name: timestamp
+                  value: now()
+              - column:
+                  name: lot_id
+                  value: 2
+        - insert:
+            tableName: bid
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: bidder_name
+                  value: Толя
+              - column:
+                  name: timestamp
+                  value: now()
+              - column:
+                  name: lot_id
+                  value: 1
+        - insert:
+            tableName: bid
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: bidder_name
+                  value: Даня
+              - column:
+                  name: timestamp
+                  value: now()
+              - column:
+                  name: lot_id
+                  value: 4
+        - insert:
+            tableName: bid
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: bidder_name
+                  value: Дима
+              - column:
+                  name: timestamp
+                  value: now()
+              - column:
+                  name: lot_id
+                  value: 3
