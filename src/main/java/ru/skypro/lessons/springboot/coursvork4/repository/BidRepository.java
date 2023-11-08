@@ -9,10 +9,16 @@ import ru.skypro.lessons.springboot.coursvork4.model.Bid;
 import java.util.Optional;
 
 public interface BidRepository extends JpaRepository<Bid, Integer> {
-    @Query("SELECT new ru.skypro.lessons.springboot.coursvork4.dto. " +
-            "FullLotDTO (f.id, f.status, f.title, f.description,f.startPrice, f.bidPrice, f.currentPrice, f.lastBid) " +
-            "FROM Bid f JOIN FETCH f.lot  " +
-            "WHERE f.id =:id " +
-            "ORDER BY f.timestamp DESC")
+//    @Query("SELECT new ru.skypro.lessons.springboot.coursvork4.dto. " +
+//            "FullLotDTO (b.id, b.status, b.lot.title, b.description,b.startPrice, b.bidPrice, b.currentPrice, b.lastBid) " +
+//            "FROM Bid b JOIN FETCH b.lot  " +
+//            "WHERE b.id =:id " +
+//            "ORDER BY b.timestamp DESC")
+//    Optional<FullLotDTO> fullLotFromLot(@Param("id") Integer id);
+
+    @Query("SELECT new ru.skypro.lessons.springboot.coursvork4.dto.FullLotDTO(b.lot.id, b.lot.status, b.lot.title, b.lot.description, b.lot.startPrice, b.lot.bidPrice, b.currentPrice, b.lastBid) " +
+            "FROM Bid b JOIN FETCH b.lot " +
+            "WHERE b.id =:id " +
+            "ORDER BY b.timestamp DESC")
     Optional<FullLotDTO> fullLotFromLot(@Param("id") Integer id);
-}
+    }

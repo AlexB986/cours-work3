@@ -9,9 +9,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BiderInfo {
-
+    private Integer id;
     private String bidderName;
     private LocalDateTime bidDate;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getBidderName() {
         return bidderName;

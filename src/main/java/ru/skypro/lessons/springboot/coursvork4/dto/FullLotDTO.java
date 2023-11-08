@@ -13,10 +13,10 @@ public class FullLotDTO {
     private Integer startPrice;
     private Integer bidPrice;
     private Integer currentPrice;
-    private Bid lastBid;
+    private BiderInfo lastBid;
 
 
-    public FullLotDTO(Integer id, Status status, String title, String description, Integer startPrice, Integer bidPrice, Integer currentPrice, Bid lastBid) {
+    public FullLotDTO(Integer id, Status status, String title, String description, Integer startPrice, Integer bidPrice, Integer currentPrice, BiderInfo lastBid) {
         this.id = id;
         this.status = status;
         this.title = title;
@@ -88,15 +88,14 @@ public class FullLotDTO {
         this.currentPrice = currentPrice;
     }
 
-    public Bid getLastBid() {
+    public BiderInfo getLastBid() {
         return lastBid;
     }
 
-    public void setLastBid(Bid lastBid) {
+    public void setLastBid(BiderInfo lastBid) {
         this.lastBid = lastBid;
     }
-
-    }
+}
 
 
 
